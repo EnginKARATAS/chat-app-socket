@@ -6,9 +6,6 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
 
-
- 
-
 io.on('connection', (socket) => {
     console.log('a user connected');
     socket.on('chat message', (msg) => {
